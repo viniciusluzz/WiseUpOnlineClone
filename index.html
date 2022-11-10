@@ -4,73 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="icon" href="/img/logo.png">
-    <title>Checkout</title>
+    <title>Login - Wise Up Online</title>
 </head>
 
 <body>
     <div id="container">
-        <div id="logo">
+        <div id="containerTwo">
             <img class="wiseup" src="/img/Screenshot_3.png">
-            <h1>Crie sua conta</h1>
-        </div>
-        <div id="form">
-            <div id="ErrorCheckboxMessage">
-                <ion-icon name="alert-circle" id="iconCheckboxError"></ion-icon>
-                <div class="textErrorCheckbox">
-                    <h5>Mensagem de erro</h5>
-                    <p>Para prosseguir, aceite a Política de Privacidade
-                        no checkbox acima do botão
-                    </p>
-                </div>
-                <ion-icon name="close-circle-outline" id="iconCheckboxError2"></ion-icon>
-            </div>
-            <div id="inputs">
-                <div class="inputsForms">
-                    <p>Nome Completo</p>
-                    <input type="text" class="input" placeholder="Ex: José da Silva">
-                    <p id="errorname" class="errorMsg">Preencha com nome e sobrenome</p>
-                </div>
-                <div class="inputsForms">
-                    <p>E-mail</p>
-                    <input type="text" class="input" id="inputEmail" placeholder="Ex: seuemail@gmail.com">
-                    <p id="errorEmail" class="errorMsg">Insira um email válido</p>
-                    <p id="errorEmail2" class="errorMsg">Usuário já cadastrado</p>
-                </div>
-                <div class="inputsForms">
-                    <p>Senha</p>
-                    <div class="divPassword">
-                        <input type="password" id="inputPassword" class="input" placeholder="Ex: abc123">
-                        <span class="material-symbols-outlined" id="eyeOn">visibility</span>
-                        <span class="material-symbols-outlined" id="eyeOff">visibility_off</span>
+            <div id="form">
+                <div id="inputs">
+                    <div class="inputsForms">
+                        <input type="text" class="input" id="inputEmail" placeholder="Insira seu email">
+                        <p class="pAbsolute">Login</p>
                     </div>
-                    <p id="errorPassword" class="errorMsg">Insira uma senha válida</p>
+                    <div class="inputsForms">
+                        <input type="password" id="inputPassword" class="input" placeholder="Insira sua senha">
+                        <p class="pAbsolute">Senha</p>
+                        <ion-icon name="eye-outline" id="eyeOn"></ion-icon>
+                        <ion-icon name="eye-off-outline" id="eyeOff"></ion-icon>
+                    </div>
                 </div>
-                <div class="check">
-                    <input type="checkbox" id="privacity">
-                    <label for="privacity">
-                        <p>Ao informar seus dados e seguir para a próxima etapa,
-                            você automaticamente concorda com nossa <span><a target="_blank"
-                                    href="https://wiseup.com/politica-de-privacidade/">Política de
-                                    privacidade</a></span>
-                        </p>
-                    </label>
+                <div class="folder">
+                    <div id="toRecoverPassword" class="toRecoverPassword">
+                        <p>Esqueceu sua senha?</p>
+                    </div>
+                    <input class="bottom" id="submit" type="button" value="LOGIN">
+                </div>
+                <div class="folderTwo">
+                    <p>Ou</p>
+                    <div class="othersLogins">
+                        <img id="googleIcon" src="/img/google.png">
+                        <img id="facebookIcon" src="/img/facebook.png">
+                    </div>
+                    <div class="registrationBottom">
+                        <p>Não tem login?<span> Cadastre-se ></span></p>
+                    </div>
                 </div>
             </div>
-            <div class="folder">
-                <input class="bottom" id="submit" type="button" value="Continuar">
-                <div class="security">
-                    <span class="material-symbols-outlined">verified_user</span>
-                    <p>Ambiente <span>100%</span> seguro</p>
-                </div>
+        </div>
+        <div class="dowloadApp">
+            <p>Estude pelo Celular. Baixe agora o App.</p>
+            <div>
+                <a target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=pt-BR">
+                    <img src="/img/play store.png">
+                </a>
+                <a target="_blank" href="https://apps.apple.com/us/app/wise-up-online/id1476457267?l=pt&ls=1">
+                    <img src="/img/app store.png">
+                </a>
             </div>
+            <a target="_blank" href="https://wiseup.com/faq/online/?_gl=1*18gxcpp*_ga*YW1wLXdESm1qai1FNDFQZG9EX0FyeVp4ZFE.*_ga_HVW8Y3X5BB*MTY2NzkxMDY0NC42OC4xLjE2Njc5MTA5NDAuNjAuMC4w">
+                <span>Central de ajuda ></span>
+            </a>
+        </div>
+    </div>
+
+    <div id="passwordInvalidMessage" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                Por favor preencha todos os campos
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError1"></ion-icon>
         </div>
         <div></div>
     </div>
+    <div id="passwordInvalidMessage2" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                Usuário ou senha inválido
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError2"></ion-icon>
+        </div>
+        <div></div>
+    </div>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -101,7 +112,7 @@
 
     </script>
 
-    <script src="/js/config.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>

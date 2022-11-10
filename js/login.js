@@ -104,7 +104,7 @@ facebookIcon.addEventListener("click",loginWithFacebook);
 // Botão de registro
 
 function bottomRegistrate() {
-  window.location.href = "index.html";
+  window.location.href = "checkout.html";
 }
 
 registrationBottom.addEventListener("click", bottomRegistrate);
