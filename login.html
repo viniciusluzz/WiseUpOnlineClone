@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/img/logo.png">
+    <title>Login - Wise Up Online</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="containerTwo">
+            <img class="wiseup" src="/img/Screenshot_3.png">
+            <div id="form">
+                <div id="inputs">
+                    <div class="inputsForms">
+                        <input type="text" class="input" id="inputEmail" placeholder="Insira seu email">
+                        <p class="pAbsolute">Login</p>
+                    </div>
+                    <div class="inputsForms">
+                        <input type="password" id="inputPassword" class="input" placeholder="Insira sua senha">
+                        <p class="pAbsolute">Senha</p>
+                        <ion-icon name="eye-outline" id="eyeOn"></ion-icon>
+                        <ion-icon name="eye-off-outline" id="eyeOff"></ion-icon>
+                    </div>
+                </div>
+                <div class="folder">
+                    <div id="toRecoverPassword" class="toRecoverPassword">
+                        <p>Esqueceu sua senha?</p>
+                    </div>
+                    <input class="bottom" id="submit" type="button" value="LOGIN">
+                </div>
+                <div class="folderTwo">
+                    <p>Ou</p>
+                    <div class="othersLogins">
+                        <img id="googleIcon" src="/img/google.png">
+                        <img id="facebookIcon" src="/img/facebook.png">
+                    </div>
+                    <div class="registrationBottom">
+                        <p>Não tem login?<span> Cadastre-se ></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dowloadApp">
+            <p>Estude pelo Celular. Baixe agora o App.</p>
+            <div>
+                <a target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=pt-BR">
+                    <img src="/img/play store.png">
+                </a>
+                <a target="_blank" href="https://apps.apple.com/us/app/wise-up-online/id1476457267?l=pt&ls=1">
+                    <img src="/img/app store.png">
+                </a>
+            </div>
+            <a target="_blank" href="https://wiseup.com/faq/online/?_gl=1*18gxcpp*_ga*YW1wLXdESm1qai1FNDFQZG9EX0FyeVp4ZFE.*_ga_HVW8Y3X5BB*MTY2NzkxMDY0NC42OC4xLjE2Njc5MTA5NDAuNjAuMC4w">
+                <span>Central de ajuda ></span>
+            </a>
+        </div>
+    </div>
+
+    <div id="passwordInvalidMessage" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                Por favor preencha todos os campos
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError1"></ion-icon>
+        </div>
+        <div></div>
+    </div>
+    <div id="passwordInvalidMessage2" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                Usuário ou senha inválido
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError2"></ion-icon>
+        </div>
+        <div></div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD70T7hCuThCRVfxiHKlIWutfh3nw1s0_g",
+            authDomain: "wiseupclone.firebaseapp.com",
+            projectId: "wiseupclone",
+            storageBucket: "wiseupclone.appspot.com",
+            messagingSenderId: "352176635238",
+            appId: "1:352176635238:web:a1cd621d593164ff679ca7"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        firebase.firestore().settings({
+            experimentalForceLongPolling: true,
+            merge: true,
+        });
+
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+
+    </script>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

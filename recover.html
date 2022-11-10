@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recover.css">
+    <link rel="icon" href="/img/logo.png">
+    <title>Wise Up Online</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="containerTwo">
+            <img class="wiseup" src="/img/Screenshot_3.png">
+            <div class="title">
+                <ion-icon name="chevron-back-outline" class="icon" id="back"></ion-icon>
+                <h1>Esqueceu sua senha?</h1>
+                <div></div>
+            </div>
+            <div class="pMessage">
+                <p>
+                    Um link para redefinir sua senha será enviado para o e-mail cadastrado em sua conta.
+                </p>
+            </div>
+            <div class="inputsForms">
+                <input type="text" class="input" id="inputEmail" placeholder="Insira seu email">
+                <p class="pAbsolute">Email</p>
+            </div>
+            <input class="bottom" id="submit" type="button" value="ENVIAR">
+        </div>
+    </div>
+
+    <div id="passwordInvalidMessage" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                Por favor, preencha seu email
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError1"></ion-icon>
+        </div>
+    </div>
+    <div id="passwordInvalidMessage2" class="classMessageError">
+        <div class="messageErrorContainer">
+            <div></div>
+            <h1>
+                O email inserido não é válido
+            </h1>
+            <ion-icon name="close-outline" class="closeError" id="closeError2"></ion-icon>
+        </div>
+    </div>
+    <div id="passwordInvalidMessage3" class="classMessageError">
+        <div class="messageErrorContainer2">
+            <div class="divError">
+                <div></div>
+                <h1>
+                    Enviamos um email para você com o link de redefinição de senha
+                </h1>
+                <ion-icon name="close-outline" class="closeError2" id="closeError3"></ion-icon>
+            </div>
+            <input class="bottom" id="submit2" type="button" value="OK">
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD70T7hCuThCRVfxiHKlIWutfh3nw1s0_g",
+            authDomain: "wiseupclone.firebaseapp.com",
+            projectId: "wiseupclone",
+            storageBucket: "wiseupclone.appspot.com",
+            messagingSenderId: "352176635238",
+            appId: "1:352176635238:web:a1cd621d593164ff679ca7"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        firebase.firestore().settings({
+            experimentalForceLongPolling: true,
+            merge: true,
+        });
+
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+    <script src="/js/recover.js"></script>
+</body>
+
+</html>

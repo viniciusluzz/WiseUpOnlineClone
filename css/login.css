@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    background-color: #1C0C2C;
+}
+
+.wiseup{
+    width: 200px;
+    height: 75px;
+}
+
+#container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 50px;
+
+    background-color: #1C0C2C;
+    color: white;
+    font-family: 'Signika Negative', sans-serif;
+    width: 100vw;
+}
+
+#containerTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 70px;
+
+    width: 65%;
+    border-bottom: gray solid 1px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 12px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-row-gap: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.inputsForms{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    width: 350px;
+    height: 60px;
+}
+
+.pAbsolute{
+    position: absolute;
+    display: flex;
+
+    color: white;
+    font-size: 15px;
+    bottom: 35px;
+}
+
+.input{
+    position: relative;
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 0px;
+    border: 0;
+    width: 100%;
+    height: 100%;
+
+    font-size: 15px;
+    outline: none;
+    color: white;
+    background-color: #1C0C2C;
+    border-bottom: gray solid 1px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+@keyframes input{
+    from{
+        padding: 0px;
+        padding-top: 15px;
+        border-radius: 0px;
+        background-color: #1C0C2C;
+        color: white;
+        border-bottom: gray solid 1px;
+    }
+
+    to{
+        padding: 10px;
+        padding-top: 20px;
+        border-radius: 20px;
+        background-color: white;
+        color: #331650;
+        border-bottom: gray solid 0px;
+    }
+}
+
+.input:first-of-type:placeholder-shown{
+    color: #04EA82;
+}
+
+.input::placeholder{
+    color: gray;
+    top: 50px;
+}
+
+.input:focus-within{
+    animation-name: input;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.inputsForms:focus-within>p{
+    color: #331650;
+    left: 10px;
+}
+
+#eyeOn, #eyeOff{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 315px;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    font-size: 25px;
+    color: gray;
+}
+
+#eyeOff{
+    display: flex;
+}
+
+.folder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 10px;
+    height: 100px;
+}
+
+.toRecoverPassword{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+}
+
+.bottom{
+    font-size: 16px;
+    font-weight: 800;
+    color: #1C0C2C;
+    background-color: #04EA82;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.folderTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 10px;
+    color: gray;
+    margin-bottom: 50px;
+}
+
+.othersLogins{
+    display: flex;
+    position: inline-block;
+    flex-direction: row;
+    grid-column-gap: 20px;
+    cursor: pointer;
+}
+
+.othersLogins img{
+    width: 40px;
+    height: 40px;
+}
+
+.dowloadApp{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 65%;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.dowloadApp div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 20px;
+}
+
+.dowloadApp p{
+    position: absolute;
+    top: 20px;
+}
+
+.dowloadApp a{
+    text-decoration: none;
+}
+
+.dowloadApp span{
+    color: #04EA82;
+}
+
+.dowloadApp img{
+    width: 145px;
+    height: 145px;
+}
+
+.registrationBottom{
+    margin-top: 25px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.registrationBottom span{
+    color: #04EA82;
+}
+
+#passwordInvalidMessage{
+    display: none;
+}
+
+#passwordInvalidMessage2{
+    display: none;
+}
+
+.classMessageError{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 140vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 200px;
+}
+
+.messageErrorContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 18%;
+
+    color: #331650;
+    font-size: 0.8rem;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: white;
+    border-radius: 25px;
+} 
+
+.closeError{
+    display: flex;
+    align-self: flex-start;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:550px) {
+    body{
+        height: 140vh;
+    }
+    .messageErrorContainer{
+        border: white 10px solid;
+    }
+}
+
+@media screen and (max-width:375px) {
+    body{
+        height: 140vh;
+    }
+    
+    .wiseup{
+        width: 200px;
+        height: 75px;
+    }
+    
+    #container{
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 5px;
+    }
+    
+    #containerTwo{
+        grid-row-gap: 20px;
+        width: 90%;
+    }
+    
+    #form{
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 5px;
+    }
+    
+    #inputs{
+        grid-row-gap: 15px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .inputsForms{
+        width: 300px;
+        height: 60px;
+    }
+
+    #eyeOn, #eyeOff{
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 270px;
+        transform: translateY(-50%);
+    
+        cursor: pointer;
+        font-size: 25px;
+        color: gray;
+    }
+
+    #eyeOff{
+        display: flex;
+    }
+
+    .bottom{
+        font-size: 13px;
+    }
+
+    .folderTwo{
+        grid-row-gap: 2px;
+        margin-bottom: 25px;
+    }
+    
+    .dowloadApp{
+        width: 65%;
+        font-size: 13px;
+        margin-bottom: 50px;
+    }
+    
+    .dowloadApp div{
+        grid-column-gap: 10px;
+    }
+    
+    .dowloadApp p{
+        position: absolute;
+        top: 20px;
+    }
+    
+    .dowloadApp a{
+        text-decoration: none;
+    }
+    
+    .dowloadApp span{
+        color: #04EA82;
+    }
+    
+    .dowloadApp img{
+        width: 145px;
+        height: 145px;
+    }
+}
