@@ -4,7 +4,7 @@
 - 💻 Salve comunidade, sabemos que existem muitos projetos clones espalhados por aí, porém acredito que este tipo de trabalho é perfeito para testar as habilidades de um dev em formação como eu.  
 <br>
 
-- Meu intuito neste trabalho, foi desenvolver o site, de modo que chegue ao mais próximo possível da página de login original, em termos de aparência e funcionalidades. Para isto ser possível, utilizei o FIREBASE AUTHENTICATION para a validação do usuário dentro da plataforma.  
+- Meu intuito neste trabalho, foi desenvolver o site, de modo que chegue ao mais próximo possível da página de login original, em termos de aparência e funcionalidades. Para isto ser possível, utilizei o FIREBASE AUTHENTICATION para: Página de criação de usuário; Página de login; Recuperação de senha e Login com Google e Facebook.   
 
 ## Features do projeto:
 
